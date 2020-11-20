@@ -1,25 +1,26 @@
 <?php
 // Start the session
-
+session_start();
 // Include questions from the questions.php file
-
+include 'questions.php';
 // Make a variable to hold the total number of questions to ask
-
+$totalQuestions = 10;
 // Make a variable to hold the toast message and set it to an empty string
-
+$correct = '';
 // Make a variable to determine if the score will be shown or not. Set it to false.
-
+$score = false;
 // Make a variable to hold a random index. Assign null to it.
-
+$randomIndex = NULL;
 // Make a variable to hold the current question. Assign null to it.
+$currentQuestion = NULL;
 
 
-/*
-    If the server request was of type POST
-        Check if the user's answer was equal to the correct answer.
+// If the server request was of type POST
+if (!empty($_POST))
+ /*       Check if the user's answer was equal to the correct answer.
         If it was correct:
-            1. Assign a congratulutory string to the toast variable
-            2. Ancrement the session variable that holds the total number correct by one.
+            1. Assign a congratulatory string to the toast variable
+            2. Increment the session variable that holds the total number correct by one.
         Otherwise:
             1. Assign a bummer message to the toast variable.
 */
