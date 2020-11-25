@@ -3,7 +3,7 @@
 //var_dump($_POST["answer"]);
 //var_dump($_POST["index"]);
 //var_dump($_SESSION); checks that the session was started successfully
-var_dump($_SESSION['used_indexes']); //checks to see if the index is being added to the array
+//var_dump($_SESSION['used_indexes']); //checks to see if the index is being added to the array
 //var_dump($_SESSION['totalCorrect']); //checks to see if the correct number gets stored
 ?>
 <!DOCTYPE html>

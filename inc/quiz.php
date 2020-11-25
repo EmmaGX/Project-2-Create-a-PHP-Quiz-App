@@ -1,5 +1,4 @@
 <?php
-ini_set('memory_limit', '1024M');
 // Start the session
 session_start();
 // Include questions from the questions.php file
@@ -51,9 +50,9 @@ if (count($_SESSION['used_indexes']) == $totalQuestions) {
         $toast = '';
     }
     do {
-        
-    }
-    $index = array_rand($questions);
+        $index = array_rand($questions);
+    } while (in_array($index, $_SESSION['used_indexes']));
+
     $question = $questions[$index];
     array_push($_SESSION['used_indexes'],$index);
     $answers = [];
