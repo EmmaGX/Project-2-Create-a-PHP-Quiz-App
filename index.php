@@ -3,8 +3,8 @@
 //var_dump($_POST["answer"]);
 //var_dump($_POST["index"]);
 //var_dump($_SESSION); checks that the session was started successfully
-//var_dump($_SESSION['used_indexes']); checks to see if the index is being added to the array
-//var_dump($_SESSION['totalCorrect']); checks to see if the correct number gets stored
+var_dump($_SESSION['used_indexes']); //checks to see if the index is being added to the array
+//var_dump($_SESSION['totalCorrect']); //checks to see if the correct number gets stored
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,16 +24,7 @@
             <?php } ?>
 
             <?php if ($show_score == false){?>
-
-            <?php } ?>
-            <?php
-//            if ($show_score == true){?>
-<!--                <p>--><?php //echo 'hello'; ?><!--</p>-->
-<!--<!--        --><?php}//?>
-
-
-
-            <p class="breadcrumbs">Question <?php echo sizeof($_SESSION['used_indexes']); ?> of <?php echo $totalQuestions; ?></p>
+            <p class="breadcrumbs">Question <?php echo count($_SESSION['used_indexes']); ?> of <?php echo $totalQuestions; ?></p>
             <p class="quiz">What is <?php echo $question['leftAdder'];?> + <?php echo $question['rightAdder'];?></p>
             <form action="index.php" method="post">
                 <input type="hidden" name="index" value=<?php echo $index; ?> />
@@ -41,7 +32,10 @@
                 <input type="submit" class="btn" name="answer" value=<?php echo $answers[1]; ?> />
                 <input type="submit" class="btn" name="answer" value=<?php echo $answers[2]; ?> />
             </form>
-
+            <?php } ?>
+            <?php if ($show_score == true){?>
+                <p><?php echo "You got " . $_SESSION['totalCorrect'] . " of " . $totalQuestions;?></p>
+            <?php } ?>
         </div>
     </div>
 </body>

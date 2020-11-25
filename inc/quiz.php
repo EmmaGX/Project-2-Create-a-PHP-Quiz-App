@@ -1,4 +1,5 @@
 <?php
+ini_set('memory_limit', '1024M');
 // Start the session
 session_start();
 // Include questions from the questions.php file
@@ -6,21 +7,12 @@ include ('inc/questions.php');
 
 
 // Make a variable to hold the current question. Assign null to it.
-$currentQuestion = NULL;
+//$currentQuestion = NULL;
 
 // Make a variable to determine if the score will be shown or not. Set it to false.
 $show_score = false;
 
 $index = array_rand($questions); //randomizes the questions array
-
-//$question = $questions[$index];
-
-//$answers = []; //This will be an array where we will hold the
-//“correctAnswer”, “firstIncorrectAnswer” and “secondIncorrectAnswer” of the $question variable.
-// $answers[] = $question['correctAnswer'];
-// $answers[] = $question['firstIncorrectAnswer'];
-// $answers[] = $question['secondIncorrectAnswer'];
-// shuffle($answers); //shuffles the answers
 
 // Make a variable to hold the total number of questions to ask
 $totalQuestions = count($questions);
@@ -44,15 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 //checks to see if the $_SESSION is not set and if not set sets it to an empty array
-if (!isset($_SESSION['used_indexes'])){
-    $_SESSION['used_indexes'] = array();
+if (!isset($_SESSION['used_indexes'])) {
+    $_SESSION['used_indexes'] = [];
     $_SESSION['totalCorrect'] = 0;
-    array_push($_SESSION['used_indexes'],$index); //pushes the index into the array
-} else {
-    array_push($_SESSION['used_indexes'],$index);
 }
 
-if ($_SESSION['used_indexes'] == $totalQuestions) {
+if (count($_SESSION['used_indexes']) == $totalQuestions) {
     $_SESSION['used_indexes'] = [];
     $show_score = true;
 } else {
@@ -60,6 +49,9 @@ if ($_SESSION['used_indexes'] == $totalQuestions) {
     if (count($_SESSION['used_indexes']) == 0) {
         $_SESSION['totalCorrect'] = 0;
         $toast = '';
+    }
+    do {
+        
     }
     $index = array_rand($questions);
     $question = $questions[$index];
