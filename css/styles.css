@@ -1,6 +1,7 @@
 /* Random Quote Generator Styles */
 
 body {
+  background-color: lightpink;
   font-family: 'Playfair Display', serif;
 }
 
@@ -54,7 +55,7 @@ body {
   border-radius: 4px;
   border: 2px solid #000;
   color: #fff;
-  background-color: #000;
+  background-color: palevioletred;
   padding: 15px;
   margin: 10px;
   transition: .5s ;

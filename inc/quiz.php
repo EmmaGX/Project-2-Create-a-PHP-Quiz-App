@@ -63,4 +63,3 @@ if (count($_SESSION['used_indexes']) == $totalQuestions) {
 }
 
 //session_destroy();
-
