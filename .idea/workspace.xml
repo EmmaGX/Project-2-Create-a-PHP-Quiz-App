@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dc93ce8-12d0-4e5c-9621-c02b6edcfcb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/quiz.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/quiz.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="9dc93ce8-12d0-4e5c-9621-c02b6edcfcb3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +54,7 @@
       <workItem from="1605889228759" duration="19756000" />
       <workItem from="1606165005803" duration="26764000" />
       <workItem from="1606620783973" duration="592000" />
-      <workItem from="1606666708184" duration="12575000" />
+      <workItem from="1606666708184" duration="12877000" />
     </task>
     <servers />
   </component>
